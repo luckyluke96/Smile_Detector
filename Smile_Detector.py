@@ -50,10 +50,9 @@ while True:
             cv2.rectangle(the_face, (x_, y_), (x_+w_, y_+h_), (50, 50, 200), 4)
 
         # Label this face as smiling
-        if len(smiles) > 0:
-            cv2.putText(frame, 'smiling', (x, y+h+40), fontScale=3,
-            fontFace=cv2.FONT_HERSHEY_PLAIN, color=(255, 255, 255))
-
+        # if len(smiles) > 0:
+        #     cv2.putText(frame, 'smiling', (x, y+h+40), fontScale=3,
+        #     fontFace=cv2.FONT_HERSHEY_PLAIN, color=(255, 255, 255))
 
     # Show current frame
     cv2.imshow('Smile Detector', frame)
