@@ -14,7 +14,10 @@ smile_detector = cv2.CascadeClassifier('haarcascade_smile.xml')
 webcam = cv2.VideoCapture(0)
 
 def sendSmile():
-    startPos[1] +=1 #increase x by one
+    if startPos[1] < 4 :
+        startPos[1] +=1 #increase x by one
+    else: startPos[1] = 4
+
     posString = ','.join(map(str, startPos)) #Converting Vector3 to a string, example "0,0,0"
     print(posString)
 
